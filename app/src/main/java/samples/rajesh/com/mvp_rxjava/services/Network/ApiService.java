@@ -35,6 +35,9 @@ public interface ApiService  {
     @GET
     Observable<String> getData(@Url String action, @QueryMap Map<String, String> fields);
 
+    @POST
+    Observable<String> postData(@Url String url,@QueryMap Map<String, String> fields);
+
     @FormUrlEncoded
     @POST
     Call<String> getPost(@Url String url,@FieldMap Map<String, String> fields);
